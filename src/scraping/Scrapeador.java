@@ -35,7 +35,7 @@ public class Scrapeador {
 			e1.printStackTrace();
 		}
 
-		Element jornadaElement = doc.createElement("jornada");
+		Element jornadaElement = doc.createElement("matchday");
 		doc.appendChild(jornadaElement);
 		jornadaElement.attr("nro", "23");
 
@@ -43,7 +43,8 @@ public class Scrapeador {
 			Document documento = getHtmlDocument(pathRecurso);
 			
 			Game game = new Game();
-			jornadaElement.appendChild(game.extractData(documento));
+			jornadaElement.appendChild(game.extractGame(documento));
+//			game.extracLineScore(documento);
 			//jornadaElement.attr("nro_scorebox", String.valueOf(scoreboxElements.size()));
 		}
 

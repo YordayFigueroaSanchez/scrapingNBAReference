@@ -1,0 +1,49 @@
+<matchday nro="23">
+ <game>
+  <team name="Chicago Bulls" url="/teams/CHI/2020.html" id="CHI" score="118" win_season="19" loss_season="32">
+   <linescore>
+    <score time="1" points="23"></score>
+    <score time="2" points="34"></score>
+    <score time="3" points="39"></score>
+    <score time="4" points="22"></score>
+   </linescore>
+   <basicboxscorestats>
+    <player name="Zach LaVine"></player>
+    <player name="Thaddeus Young"></player>
+    <player name="Tomáš Satoranský"></player>
+    <player name="Luke Kornet"></player>
+    <player name="Kris Dunn"></player>
+    <player name="Coby White"></player>
+    <player name="Chandler Hutchison"></player>
+    <player name="Cristiano Felício"></player>
+    <player name="Ryan Arcidiacono"></player>
+    <player name="Denzel Valentine"></player>
+    <player name="Shaquille Harrison"></player>
+    <player name="Adam Mokoka"></player>
+   </basicboxscorestats>
+  </team>
+  <team name="Brooklyn Nets" url="/teams/BRK/2020.html" id="BRK" score="133" win_season="21" loss_season="26">
+   <linescore>
+    <score time="1" points="35"></score>
+    <score time="2" points="38"></score>
+    <score time="3" points="30"></score>
+    <score time="4" points="30"></score>
+   </linescore>
+   <basicboxscorestats>
+    <player name="Kyrie Irving"></player>
+    <player name="Taurean Waller-Prince"></player>
+    <player name="Jarrett Allen"></player>
+    <player name="Joe Harris"></player>
+    <player name="Garrett Temple"></player>
+    <player name="Spencer Dinwiddie"></player>
+    <player name="Caris LeVert"></player>
+    <player name="Wilson Chandler"></player>
+    <player name="DeAndre Jordan"></player>
+    <player name="Timothé Luwawu-Cabarrot"></player>
+    <player name="Rodions Kurucs"></player>
+    <player name="Jeremiah Martin"></player>
+    <player name="Nicolas Claxton"></player>
+   </basicboxscorestats>
+  </team>
+ </game>
+</matchday>

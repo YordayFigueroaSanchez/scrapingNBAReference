@@ -1,0 +1,20 @@
+<jornada nro="23">
+ <game>
+  <team name="Chicago Bulls" url="/teams/CHI/2020.html" id="CHI" score="118" win_season="19" loss_season="32">
+   <linescore>
+    <linescore time="1" points="23"></linescore>
+    <linescore time="2" points="34"></linescore>
+    <linescore time="3" points="39"></linescore>
+    <linescore time="4" points="22"></linescore>
+   </linescore>
+  </team>
+  <team name="Brooklyn Nets" url="/teams/BRK/2020.html" id="BRK" score="133" win_season="21" loss_season="26">
+   <linescore>
+    <linescore time="1" points="23"></linescore>
+    <linescore time="2" points="34"></linescore>
+    <linescore time="3" points="39"></linescore>
+    <linescore time="4" points="22"></linescore>
+   </linescore>
+  </team>
+ </game>
+</jornada>

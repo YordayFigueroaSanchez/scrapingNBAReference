@@ -1,0 +1,22 @@
+<matchday nro="23">
+ <game>
+  <team name="Chicago Bulls" url="/teams/CHI/2020.html" id="CHI" score="118" win_season="19" loss_season="32">
+   <linescore>
+    <score time="1" points="23"></score>
+    <score time="2" points="34"></score>
+    <score time="3" points="39"></score>
+    <score time="4" points="22"></score>
+   </linescore>
+   <basicboxscorestats></basicboxscorestats>
+  </team>
+  <team name="Brooklyn Nets" url="/teams/BRK/2020.html" id="BRK" score="133" win_season="21" loss_season="26">
+   <linescore>
+    <score time="1" points="35"></score>
+    <score time="2" points="38"></score>
+    <score time="3" points="30"></score>
+    <score time="4" points="30"></score>
+   </linescore>
+   <basicboxscorestats></basicboxscorestats>
+  </team>
+ </game>
+</matchday>
