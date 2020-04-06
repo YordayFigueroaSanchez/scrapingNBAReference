@@ -25,12 +25,61 @@ public class Game {
 
 		teamAway.appendChild(this.extractBasicBoxScoreStats(documento, teamAway.attr("id")));
 		teamHome.appendChild(this.extractBasicBoxScoreStats(documento, teamHome.attr("id")));
-
+		
 		Element game = documento.createElement("game").appendChild(teamAway);
 		game.appendChild(teamHome);
+		
+		game.appendChild(this.extractPlayerInactive(documento));
+		
+		game.appendChild(this.extractOfficials(documento));
+		
+		game.appendChild(this.extractAttendance(documento));
+		
+		game.appendChild(this.extractTimeOfGame(documento));
+		
 		return game;
 	}
-
+	public Element extractTimeOfGame(Document documento) {
+		Element TimeOfGame = documento.createElement("timeofgame");
+		Element TimeOfGameElement = documento.select("div  > strong:contains(Time Of Game)").first().parents().first();
+		String strTimeOfGameText = TimeOfGameElement.html();
+		String [] strTimeOfGameArray = strTimeOfGameText.split("</strong>");
+		String strTimeOfGame = strTimeOfGameArray[1].trim();
+		String [] arrayTimeOfGame = strTimeOfGame.split(":");
+		Integer timeGame = Integer.valueOf(arrayTimeOfGame[0])*60 + Integer.valueOf(arrayTimeOfGame[1]);  
+		return TimeOfGame.attr("minute", String.valueOf(timeGame));
+	}
+	public Element extractAttendance(Document documento) {
+		Element attendance = documento.createElement("attendance");
+		Element attendanceElement = documento.select("div  > strong:contains(Attendance)").first().parents().first();
+		String strAttendanceText = attendanceElement.html();
+		String [] strAttendanceArray = strAttendanceText.split("</strong>");
+		String strAttendance = strAttendanceArray[1].replaceAll(",", "");
+		return attendance.attr("person", strAttendance);
+	}
+	public Element extractOfficials(Document documento) {
+		Element officials = documento.createElement("referees");
+		Elements officialsElements = documento.select("div  > strong:contains(Officials)").first().parents().first().select("a");
+		for (Element element : officialsElements) {
+			Element official = documento.createElement("referee");
+			official.attr("url", element.attr("href"));
+			official.attr("name", element.text());
+			officials.appendChild(official);
+		}
+		return officials;
+	}
+	public Element extractPlayerInactive(Document documento) {
+		Element inactive = documento.createElement("inactive");
+		Elements inactivePlayerElements = documento.select("div  > strong:contains(Inactive)").first().parents().first().select("a");
+		for (Element element : inactivePlayerElements) {
+			Element playerInactive = documento.createElement("player");
+			playerInactive.attr("url", element.attr("href"));
+			playerInactive.attr("name", element.text());
+			inactive.appendChild(playerInactive);
+		}
+		return inactive;
+	}
+	
 	public Element extractBasicBoxScoreStats(Document documento, String id) {
 
 		Element basicBoxScoreStats = documento.createElement("basicBoxScoreStats");

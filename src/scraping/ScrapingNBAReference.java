@@ -26,9 +26,10 @@ public class ScrapingNBAReference {
 	public static void main(String[] args) throws ParserConfigurationException, TransformerConfigurationException {
 		// TODO Auto-generated method stub
 
-		String url = "https://www.basketball-reference.com/boxscores/202001310BRK.html";
+		String urlBoxscores = "https://www.basketball-reference.com/boxscores/202001310BRK.html";
+		String urlPbp = "https://www.basketball-reference.com/pbp/202001310BRK.html";
 		Scrapeador scrap = new Scrapeador();
-		scrap.toXML(url);
+		scrap.toXML(urlBoxscores);
 
 	}
 }
